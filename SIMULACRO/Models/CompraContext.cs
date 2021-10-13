@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SIMULACRO.Models
 {
-    public class AdopcionContext : DbContext
+    public class CompraContext : DbContext
     {
-        public DbSet<SolicitudCompra> SolicitudesAdopcion { get; set; }
-        public AdopcionContext(DbContextOptions dco) : base(dco) {
+        public DbSet<SolicitudCompra> SolicitudCompra { get; set; }
+        public CompraContext(DbContextOptions dco) : base(dco) {
 
         }
     }

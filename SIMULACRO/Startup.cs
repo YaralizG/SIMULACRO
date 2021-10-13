@@ -26,8 +26,10 @@ namespace SIMULACRO
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
-            services.AddDbContext<CompraContext>(options => options.UseInMemoryDatabase("CompraDB"));
+            
+            var connectionString = "server=localhost;user=root;password=root;database=CompraBD";
+            var serverVersion = ServerVersion.AutoDetect(connectionString);
+            services.AddDbContext<CompraContext>(options => options.UseMySql(connectionString, serverVersion));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
