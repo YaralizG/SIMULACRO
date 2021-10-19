@@ -1,0 +1,53 @@
+@model Producto
+ 
+<div class="col-6">
+    <div class="text-left">
+        <h1 class="">Registrar nueva solicitud </h1>
+    </div>
+</div>
+
+<form  class="form-container" method="POST">
+    <div asp-validation-summary="All"></div>
+
+    <div class="col-6">
+
+
+
+    <div class="form-group">
+        <label asp-for="nombre" > </label>
+        <input asp-for="nombre" type="text"class="form-control">
+    </div>  
+    <div class="form-group">
+        <label asp-for="fotoproducto" > </label>
+        <input asp-for="fotoproducto" type="url" placeholder="https://example.com" class="form-control">
+    </div>  
+    <div class="form-group">
+        <label asp-for="descripcion" > </label>
+        <input asp-for="descripcion" type="text"class="form-control">
+    </div>  
+    <div class="form-group">
+        <label asp-for="precio" > </label>
+        <input asp-for="precio" type="text"class="form-control">
+    </div>  
+    <div class="form-group">
+        <label asp-for="nrocelular" > </label>
+        <input asp-for="nrocelular" type="text"class="form-control">
+    </div> 
+    <div class="form-group">
+        <label asp-for="lugarcompra" > </label>
+        <input asp-for="lugarcompra" type="text"class="form-control">
+    </div> 
+    <div class="form-group">
+        <label asp-for="nombrecomprador" > </label>
+        <input asp-for="nombrecomprador" type="text"class="form-control">
+    </div> 
+    <div class="form-group">
+        <label asp-for="Categoria" > </label>
+        <select asp-for="Categoriaid" asp-items="ViewBag.Categorias" type="text" class="form-control"></select>
+        <!--para hacer una seleccion saber a que campo se va enlazar --- tiene que saber la lista que va traer eso se hace con asp-items-->
+    </div> 
+    
+    <button class="btn btn-primary"> Registrar</button>
+   </div>
+
+</form>

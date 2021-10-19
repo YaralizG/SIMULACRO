@@ -2,43 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model List<SolicitudCompra>
-    
-    <h1>Lista de Solicitudes</h1>
-
-
-    <table  class="table border table-striped">
-        <tr>
-            <th>Id</th>
-            <th>NombreProducto</th>
-            <th>FotoProducto</th>
-            <th>Descripcion</th>
-            <th>PrecioProducto</th>
-            <th>Celular</th>
-            <th>LugarCompra</th>
-            <th>NombreComprador</th>
-            <th>CategoriaProducto</th>
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.NombreProducto</td>
-                <td><a href="@item.FotoProducto">url de foto </a></td>
-                <td>@item.Descripcion</td>
-                <td>@item.PrecioProducto</td>
-                <td>@item.Celular</td>
-                <td>@item.LugarCompra</td>
-                <td>@item.NombreComprador</td>
-                <td>@item.CategoriaProducto</td>
-                 
-            </tr>
-        }
-        @if(Model.Count ==0)
-        {
-            <tr>
-                <td colspan="7" class="text-center">No se encontraron Solicitudes</td>
-            </tr>
-            
-        }
-    </table>    
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
