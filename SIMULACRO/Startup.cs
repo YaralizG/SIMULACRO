@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using SIMULACRO.Models;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace SIMULACRO
 {
     public class Startup
@@ -29,6 +30,10 @@ namespace SIMULACRO
             var connectionString = "server=localhost;user=root;password=admin;database=producto";
             var serverVersion = ServerVersion.AutoDetect(connectionString);
             services.AddDbContext<ProductoContext>(options => options.UseMySql(connectionString, serverVersion));
+
+          
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

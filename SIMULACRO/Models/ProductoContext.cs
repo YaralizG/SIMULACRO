@@ -12,8 +12,9 @@ namespace SIMULACRO.Models
 
         public DbSet<Producto> Productos{get; set;}
         
-        public ProductoContext(DbContextOptions dco):base(dco) {
-        
-        }
+        public ProductoContext(DbContextOptions dco):base(dco) {        }
+
+
+
     }
 }
